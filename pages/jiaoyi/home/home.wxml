@@ -1,0 +1,32 @@
+<swiper autoplay="true" interval="3000" duration="1000" indicator-active-color="#7fabfd">
+  <swiper-item>
+    <image style='width:{{imgWidth}}px;height:{{imgHeight}}px;' src="../../../images/scroll-1.jpg" class="slide-image" />
+  </swiper-item>
+  <swiper-item>
+    <image style='width:{{imgWidth}}px;height:{{imgHeight}}px;' src="../../../images/scroll-2.png" class="slide-image" />
+  </swiper-item>
+</swiper>
+<view class='top'>Top5</view>
+<view class='list' scroll-y='true'>
+  <view class='item' wx:for='{{list}}' wx:key='id' style='width:{{itemWidth}}px;height:{{itemHeight}}px;' bindtap='clickItem' data-item='{{item}}'>
+    <view class='top' style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'>
+      <image class='top-img' src='{{item.pic_url}}' style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'></image>
+    </view>
+    <view class='bottom'>
+      <view class='bottom-title'>{{item.name}}</view>
+      <view class='bottom-price' style='width:{{itemWidth}}px;'>
+        <view class='bottom-price-right'>价格:{{item.price}}元</view>
+        <view class='bottom-price-right'>兑换:{{item.point}}积分</view>
+      </view>
+    </view>
+  </view>
+  <view class='item' style='width:{{itemWidth}}px;height:{{itemHeight}}px;' bindtap='clickAll'>
+    <view class='top' style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'>
+      <image class='top-img' src='../../../images/gengduo.png' style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'></image>
+    </view>
+    <view class='bottom'>
+      <view class='bottom-title'>查看更多</view>
+      <view class='bottom-price'></view>
+    </view>
+  </view>
+</view>

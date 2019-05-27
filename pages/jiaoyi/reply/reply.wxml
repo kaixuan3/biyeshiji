@@ -1,0 +1,11 @@
+<view class="remark">
+  <view class="re-left">回复</view>
+  <view class="re-right">
+    <textarea class="textarea" placeholder="请输入回复内容" placeholder-style="color:#6a6a6a;" bindconfirm='bindconfirm' bindinput='bindinput' bindblur='bindblur' value='{{remark}}' />
+  </view>
+</view>
+<view class="submit" bindtap='clickCommit'>
+  <button type="primary">
+    确定
+  </button>
+</view>

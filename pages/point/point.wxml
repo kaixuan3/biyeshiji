@@ -1,0 +1,16 @@
+<view class='list'>
+  <view class='list-item' wx:for='{{list}}' wx:key='this'>
+    <view class='item-top'>
+      <view class='item-top-name' wx:if='{{item.order_real_name}}'>{{item.order_real_name}}</view>
+      <view class='item-top-name' wx:elif='{{item.order_username}}'>{{item.order_username}}</view>
+      <view class='item-top-name' wx:else>新用户</view>
+      <view class='item-top-ticheng'>+{{item.point}}积分</view>
+    </view>
+    <view class='item-bottom'>
+      {{item.description}}
+    </view>
+    <view class='item-bottom'>
+      {{item.createtime}}
+    </view>
+  </view>
+</view>

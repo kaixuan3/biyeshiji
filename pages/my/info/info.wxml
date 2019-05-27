@@ -1,0 +1,30 @@
+<view class='content'>
+  <view class='nav'>
+    <image class='top' src="{{userData.c_userphoto}}"></image>
+    <view class='nickname'>{{userData.c_username}}</view>
+  </view>
+  <view class='item'>
+    <text class='left'>姓名：</text>
+    <input class='right' bindinput="nameChange" bindblur="nameChange" bindconfirm="nameChange" value='{{userData.real_name}}'></input>
+  </view>
+  <view class='item'>
+    <text class='left'>手机号：</text>
+    <input class='right' bindinput="mobileChange" bindblur="mobileChange" bindconfirm="mobileChange" value='{{userData.c_phone}}' type='number'></input>
+  </view>
+  <view class='item'>
+    <text class='left'>性别：</text>
+    <input class='right' value='{{userData.c_sex=="M"?"男":"女"}}' bindtap='clickSex' disabled='true'></input>
+  </view>
+  <view class='item'>
+    <text class='left'>出生日期：</text>
+    <picker class='right-picker' mode="date" value='{{userData.c_birthdate}}' start="1980-01-01" end="{{maxDate}}" bindchange="bindDateChange">
+      <view class='right-view' wx:if='{{userData.c_birthdate}}'>{{userData.c_birthdate}}</view>
+      <view class='right-view' wx:else>请选择</view>
+    </picker>
+  </view>
+  <view class='item'>
+    <text class='left'>地址：</text>
+    <input class='right' bindinput="addressChange" bindblur="addressChange" bindconfirm="addressChange" value='{{userData.address}}'></input>
+  </view>
+</view>
+<button class='submit' bindtap='submit'>修改</button>

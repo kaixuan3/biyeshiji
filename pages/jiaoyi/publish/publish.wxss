@@ -1,0 +1,69 @@
+/* pages/remarkWaybillTrans/remarkWaybillTrans.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.remark {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+.bottom {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.re-right {
+  width: 100%;
+}
+.title-textarea {
+  height: 60rpx;
+  border: 1px solid #6e6e6e;
+  width: 100%;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.title-textarea-picker {
+  height: 60rpx;
+  width: 100%;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.textarea {
+  height: 80px;
+  border: 1px solid #6e6e6e;
+  width: 100%;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.question-images {
+  margin-left: 20px;
+}
+.q-image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.q-image-remover {
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.submit {
+  margin-top: 20px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.submitBtn {
+  background-color: greenyellow;
+}

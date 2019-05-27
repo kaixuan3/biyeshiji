@@ -1,0 +1,40 @@
+page {
+  background-color: rgba(190, 233, 200, 0.568);
+  height: 100%;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: white;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+.item-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.item-top-name {
+  font-size: 28rpx;
+  color: #333;
+}
+.item-top-ticheng {
+  font-size: 28rpx;
+  color: #333;
+}
+.item-bottom {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+}

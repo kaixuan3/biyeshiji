@@ -1,0 +1,32 @@
+<view class='header' catchtap='clickInfo'>
+  <image class='header-img' src='{{userData.c_userphoto}}'></image>
+  <view class='header-name' wx:if='{{userData.real_name}}'>{{userData.real_name}}</view>
+  <view class='header-name' wx:else>{{userData.c_username}}</view>
+  <view class='header-name'>积分:{{userData.point}}</view>
+</view>
+
+<view class='tousu'>
+  <view class='tousu-view' catchtap='clickJifen'>
+    <image class='tousu-img' src='../../../images/ticheng.png'></image>
+  <view class='tous-text'>我的积分</view>
+  </view>
+</view>
+
+<view class='content' style='margin-top:{{contentY}}px;'>
+  <view class='content-item' style='width:{{contentItemWidth}}px;height:{{contentItemHeight}}px;' bindtap='clickClass'>
+    <image class='content-item-img' src='../../../images/jiaoyi.png' style='width:{{contentItemImgWidth}}px;height:{{contentItemImgHeight}}px;'></image>
+    <view class='content-item-text'>我的交易</view>
+  </view>
+  <view class='content-item' style='width:{{contentItemWidth}}px;height:{{contentItemHeight}}px;' bindtap='clickTimeTable'>
+    <image class='content-item-img' src='../../../images/fabu.png' style='width:{{contentItemImgWidth}}px;height:{{contentItemImgHeight}}px;'></image>
+    <view class='content-item-text'>我的人脉</view>
+  </view>
+  <view class='content-item' style='width:{{contentItemWidth}}px;height:{{contentItemHeight}}px;' bindtap='clickGrade'>
+    <image class='content-item-img' src='../../../images/home/dizhi.png' style='width:{{contentItemImgWidth}}px;height:{{contentItemImgHeight}}px;'></image>
+    <view class='content-item-text'>我的地址</view>
+  </view>
+  <view class='content-item' style='width:{{contentItemWidth}}px;height:{{contentItemHeight}}px;' bindtap='clickNotice'>
+    <image class='content-item-img' src='../../../images/home/gonggao.png' style='width:{{contentItemImgWidth}}px;height:{{contentItemImgHeight}}px;'></image>
+    <view class='content-item-text'>系统公告</view>
+  </view>
+</view>

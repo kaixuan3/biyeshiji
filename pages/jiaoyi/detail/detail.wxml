@@ -1,0 +1,73 @@
+<scroll-view scroll-y='true' style='height:{{listHeight}}px;'>
+  <view class='top'>
+    <view class='top-left'>
+      <image class='top-left-img' src='{{data.pic_url}}' wx:if='{{data.pic_url}}'></image>
+      <image class='top-left-img' src='../../../images/goods.png' wx:else></image>
+    </view>
+    <view class='top-right' style='width:{{topRightWidth}}px;'>
+      <view class='top-right-top'>
+        <view class='top-right-top-left'>商品名称:{{data.name}}</view>
+        <view class='top-right-top-right' bindtap='clickShouCang'>
+          <image class='top-right-top-right-img' src='../../../images/shoucang.png' wx:if='{{data.is_shoucang=="0"}}'></image>
+          <image class='top-right-top-right-img' src='../../../images/shoucang-2.png' wx:if='{{data.is_shoucang=="1"}}'></image>
+          <view class='top-right-top-right-text'>购物车</view>
+        </view>
+      </view>
+      <view class='top-right-bottom'>
+        <view class='top-right-bottom-left'>商品价格:{{data.price}}</view>
+        <view class='top-right-bottom-right'>商品类型:{{data.good_type}}</view>
+      </view>
+      <view class='top-right-text'>积分兑换:{{data.point}}积分</view>
+    </view>
+  </view>
+  <view class='middle'>
+    <view class='middle-top'>
+      <view class='middle-top-left'>发布人:{{data.real_name}}</view>
+      <view class='middle-top-right' bindtap='clickPhone' data-phone='{{data.c_phone}}'>联系电话:
+        <text>{{data.c_phone}}</text>
+      </view>
+    </view>
+    <view class='middle-middle'>发布时间:{{data.createtime}}</view>
+    <view class='middle-bottom'>
+      <view class='middle-bottom-top'>商品描述:</view>
+      <view class='middle-bottom-bottom'>{{data.description}}</view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='bottom-top'>选择收货地址:</view>
+    <view class='bottom-item' wx:if='{{list.length==0}}' bindtap='clickAddres'>
+      <view class='bottom-text'>没有收货地址,去添加</view>
+    </view>
+    <picker wx:else range='{{range}}' value='{{selectIndex}}' bindchange='pickerChange'>
+      <view class='bottom-item'>
+        <view class='item-top'>
+          <view class='item-top-left'>收货人:{{addressData.username}}</view>
+          <view class='item-top-right'>联系电话:{{addressData.mobile}}</view>
+        </view>
+        <view class='item-bottom'>收货地址:{{addressData.address}}</view>
+      </view>
+    </picker>
+  </view>
+  <view class='replyList'>
+    <view class='reply-title'>
+      <view class='reply-title-left'>评论列表</view>
+      <view class='reply-title-right' bindtap='clickPinglun' wx:if='{{type=="1"}}'>评论</view>
+    </view>
+    <view class='replyList-item' wx:for='{{data.liuyanlist}}' wx:key='this'>
+      <view class='replyList-name' wx:if='{{item.real_name}}'>{{item.real_name}}:</view>
+      <view class='replyList-name' wx:else>未知用户:</view>
+      <view class='replyList-content'>{{item.content}}</view>
+      <view class='replyList-time'>评论时间:{{item.createtime}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class='publish' style='height:{{publishHeight}}px;' bindtap='clickPublish'>
+  <block wx:if='{{type=="1"}}'>
+    <view class='publish-text' wx:if='{{isSelf==false}}'>删除订单</view>  
+  </block>
+  <block wx:else>
+    <view class='publish-text' wx:if='{{isSelf==false}}'>我要购买</view>
+  <view class='publish-text' wx:if='{{isSelf==true}}'>取消发布</view>
+  </block>
+</view>

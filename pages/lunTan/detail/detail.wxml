@@ -1,0 +1,47 @@
+<!-- <view class='container'> -->
+  <scroll-view class='list' style='height:{{listHeight}}px;' scroll-y='true'>
+    <view class='item'>
+      <view class='item-top' data-item='{{item}}' bindtap='clickDetail'>
+        <view class='item-top-top'>
+          <text class='item-top-text' wx:if='{{item.stick=="1"}}'>{{item.stick_name}}</text> {{item.post_title}}
+        </view>
+        <view class='item-top-bottom'>
+          <view class='item-top-time'>时间:{{item.createtime}}</view>
+          <view class='item-top-name'>发布人:{{item.client_name}}</view>
+        </view>
+      </view>
+      <view class='item-middle' data-item='{{item}}' bindtap='clickDetail'>{{item.post_content}}</view>
+      <view class='item-bottom'>
+        <view class='item-bottom-left' data-item='{{item}}' bindtap='clickDetail' style='width:{{bottomLeftWidth}}px;'>
+          <view class='item-bottom-item'>
+            <image class='bottom-img' src='../../../images/lunTan/liulan.png'></image>
+            <view class='bottom-text'>浏览:{{item.post_readcount}}</view>
+          </view>
+          <view class='item-bottom-item'>
+            <image class='bottom-img' src='../../../images/lunTan/huifu.png'></image>
+            <view class='bottom-text'>回复:{{item.replycount}}</view>
+          </view>
+        </view>
+        <view class='item-bottom-right'>
+          <view class='dianzan-item' bindtap='clickDianZan' data-item='{{item}}'>
+            <image class='bottom-img' src='../../../images/lunTan/dianZan.png' wx:if='{{item.dianzan_flag==false}}'></image>
+            <image class='bottom-img' src='../../../images/lunTan/dianZan-select.png' wx:if='{{item.dianzan_flag==true}}'></image>
+            <view class='bottom-text'>点赞:{{item.dianzancount}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='replyList' wx:if='{{replypostList.length!=0}}'>
+      <view class='reply-title'>评论列表</view>
+      <view class='replyList-item' wx:for='{{replypostList}}' wx:key='this'>
+        <view class='replyList-name' wx:if='{{item.reply_client_name}}'>{{item.reply_client_name}}:</view>
+        <view class='replyList-name' wx:else>未知用户:</view>
+        <view class='replyList-content'>{{item.reply_content}}</view>
+        <view class='replyList-time'>回复时间:{{item.createtime}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='publish' style='height:{{publishHeight}}px;' bindtap='clickReply'>
+    <view class='publish-text'>评论</view>
+  </view>
+<!-- </view> -->

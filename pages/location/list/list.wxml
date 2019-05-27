@@ -1,0 +1,13 @@
+<scroll-view scroll-y style='height:{{listHeight}}px;'>
+  <view class='item' wx:for='{{list}}' wx:key='id'>
+    <view class='top'>
+      <view class='top-left'>收货人:{{item.username}}</view>
+      <view class='top-right'>联系电话:{{item.mobile}}</view>
+    </view>
+    <view class='bottom'>收货地址:{{item.address}}</view>
+  </view>
+</scroll-view>
+
+<view class='publish' style='height:{{publishHeight}}px;' bindtap='clickPublish'>
+  <view class='publish-text'>添加地址</view>
+</view>

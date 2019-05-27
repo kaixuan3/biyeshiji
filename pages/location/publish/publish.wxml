@@ -1,0 +1,18 @@
+<view class='list'>
+  <view class='item' style='width:{{itemWidth}}px;'>
+    <view class='item-left' style='width:{{leftWidth}}px;'>联系人:</view>
+    <input class='item-right' placeholder='名称' style='width:{{rightWidth}}px;' bindinput="nameChange" bindblur="nameChange" bindconfirm="nameChange"></input>
+  </view>
+  <view class='item' style='width:{{itemWidth}}px;'>
+    <view class='item-left' style='width:{{leftWidth}}px;'>手机号码:</view>
+    <input class='item-right' placeholder='手机号码' style='width:{{rightWidth}}px;' bindinput="mobileChange" bindblur="mobileChange" bindconfirm="mobileChange" type='number'></input>
+  </view>
+  <view class='item' style='width:{{itemWidth}}px;'>
+    <view class='item-left' style='width:{{leftWidth}}px;'>详细地址:</view>
+    <textarea class='item-right' placeholder='详细地址' style='width:{{rightWidth}}px;' disabled='true' value='{{address}}' bindtap='clickAddress'></textarea>
+  </view>
+</view>
+
+<view class='publish' style='height:{{publishHeight}}px;' bindtap='clickPublish'>
+  <view class='publish-text'>提交</view>
+</view>

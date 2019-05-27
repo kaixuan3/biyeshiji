@@ -1,0 +1,26 @@
+
+<view class='searchView'>
+  <input class='search-inputh' style='width:{{inputhWidth}}px;' placeholder='请输入搜索名称' value='{{serachName}}' bindinput="nameChange" bindblur="nameChange" bindconfirm="nameChange"></input>
+  <view class='search-btn' style='width:{{searchBtnWidth}}px;' bindtap='clickSearch'>搜索</view>
+</view>
+<picker range='{{typeName}}' value='{{typeIndex}}' bindchange='typeChange'>
+<view class='typeView' >
+  <view class='typeView-left'>类型选择:</view>
+  <view class='typeView-right'>{{type}}</view>
+</view>
+</picker>
+<view class='list' scroll-y='true'>
+  <view class='item' wx:for='{{list}}' wx:key='id' style='width:{{itemWidth}}px;height:{{itemHeight}}px;' bindtap='clickItem' data-item='{{item}}'>
+    <view class='top' style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'>
+      <image class='top-img' src='{{item.pic_url}}' wx:if='{{item.pic_url}}' style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'></image>
+      <image class='top-left-img' src='../../../images/goods.png' wx:else style='width:{{itemImgWidth}}px;height:{{itemImgHeight}}px;'></image>
+    </view>
+    <view class='bottom'>
+      <view class='bottom-title'>{{item.name}}</view>
+      <view class='bottom-price' style='width:{{itemWidth}}px;'>
+        <view class='bottom-price-right'>价格:{{item.price}}元</view>
+        <view class='bottom-price-right'>兑换:{{item.point}}积分</view>
+      </view>
+    </view>
+  </view>
+</view>

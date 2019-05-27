@@ -1,0 +1,51 @@
+page {
+  background-color: rgba(190, 233, 200, 0.568);
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  justify-content: center;
+  align-items: center;
+}
+.top-title {
+  font-size: 30rpx;
+  color: #333;
+}
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: white;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+.item-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.item-top-name {
+  font-size: 28rpx;
+  color: #333;
+}
+.item-top-ticheng {
+  font-size: 28rpx;
+  color: #333;
+}
+.item-bottom {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+}

@@ -1,0 +1,10 @@
+<scroll-view class='list' style='width:{{listWidth}}px;height:{{listHeight}}px;' scroll-y='true'>
+  <view class='item' wx:for='{{list}}' wx:key='id'>
+    <view class='item-top'>
+      <view class='stick' wx:if='{{item.stick=="1"}}'>置顶</view>
+      <view class='title'>{{item.title}}</view>
+    </view>
+    <view class='item-content'>{{item.content}}</view>
+    <view class='time'>{{item.createtime}}</view>
+  </view>
+</scroll-view>

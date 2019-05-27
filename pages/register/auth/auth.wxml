@@ -1,0 +1,5 @@
+<view class='noLogin-view' wx:if="{{!hasUserInfo}}">
+  <image src='../../../images/noLogin.png' class='noLogin-img' style="width:{{ images.width }}px; height:{{ images.height}}px;"></image>
+  <text class='noLogin-text'>您还未授权</text>
+  <button class='noLogin-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">开启授权</button>
+</view>

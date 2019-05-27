@@ -1,0 +1,17 @@
+<!-- <view class='container'> -->
+  <view class="remark">
+    <view class='top'>
+        <textarea class="title-textarea" placeholder="请输入标题" placeholder-style="color:#6a6a6a;" bindconfirm='bindconTitle' bindinput='bindconTitle' bindblur='bindconTitle' value='{{title}}' />
+    </view>
+    <view class='bottom'>
+      <view class="re-right">
+        <textarea class="textarea" placeholder="请输入内容" placeholder-style="color:#6a6a6a;" bindconfirm='bindconfirm' bindinput='bindinput' bindblur='bindblur' value='{{remark}}' selection-start='10' selection='10' />
+      </view>
+    </view>
+  </view>
+  <view class="submit" bindtap='clickCommit'>
+    <button type="primary" class='submitBtn'>
+      确定
+    </button>
+  </view>
+<!-- </view> -->

@@ -1,0 +1,14 @@
+<view wx:if="{{!success}}">
+  <view class='row'>
+    <input class='info-input' bindinput="yPwdChange" bindblur="yPwdChange" bindconfirm="yPwdChange" placeholder="请输入你的学号" value='{{userData.account}}' disabled='false' />
+  </view>
+  <view class='row'>
+    <input type='password' class='info-input' bindinput="pwdChange" bindblur="pwdChange" bindconfirm="pwdChange" placeholder="请输入你的密码" />
+  </view>
+  <button class='submit' bindtap='submit'>提交</button>
+</view>
+<view class='success' wx:if="{{success}}">
+  <view class='cheer'>
+    <icon type="success" size="24" /> 恭喜您登录成功!</view>
+  <button type="default" class='return' bindtap='return_home'>返回</button>
+</view>

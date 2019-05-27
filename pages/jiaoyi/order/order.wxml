@@ -1,0 +1,18 @@
+<view class='list'>
+  <view class='item' wx:for='{{list}}' wx:key='id' data-item='{{item}}' bindtap='clickItem'>
+    <view class='item-top'>
+      <image class='item-left' src='{{item.pic_url}}' wx:if='{{item.pic_url}}'></image>
+      <image class='item-left' src='../../../images/goods.png' wx:else></image>
+      <view class='item-right' style='width:{{rightWidth}}px;'>
+        <view class='item-right-top'>
+          <view class='item-right-top-left'>{{item.good_name}}</view>
+          <view class='item-right-top-right'>交易时间:{{item.createtime}}</view>
+        </view>
+        <view class='item-right-bottom'>
+          <view class='item-right-bottom-left' wx:if='{{item.pay_type=="1"}}'>购买价格:{{item.price}}</view>
+          <view class='item-right-bottom-left' wx:if='{{item.pay_type=="2"}}'>积分兑换:{{item.order_money}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

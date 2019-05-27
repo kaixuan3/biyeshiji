@@ -1,0 +1,15 @@
+<view class='top' style='height:{{topHeight}}px;'>
+  <button class='top-title' open-type='share'>分享给小伙伴获取人脉</button>
+</view>
+<view class='list' style='height:{{scrollHeight}}px;'>
+  <view class='list-item' wx:for='{{list}}' wx:key='this'>
+    <view class='item-top'>
+      <view class='item-top-name' wx:if='{{item.real_name}}'>{{item.real_name}}</view>
+      <view class='item-top-name' wx:else>{{item.c_username}}</view>
+      <view class='item-top-ticheng'>联系方式:{{item.c_phone}}</view>
+    </view>
+    <view class='item-bottom'>
+      加入时间:{{item.createtime}}
+    </view>
+  </view>
+</view>
